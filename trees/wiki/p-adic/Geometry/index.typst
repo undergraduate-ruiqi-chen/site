@@ -1,0 +1,11 @@
+
+#import "../../../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  title: [$p$-adic geometry],
+))
+
+#local("Huber.typst") \
+#local("Adic.typst")

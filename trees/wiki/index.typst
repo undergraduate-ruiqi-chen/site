@@ -1,0 +1,11 @@
+
+#import "../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  title: [Wiki index],
+))
+
+#local("Differential Geometry/index.typst") \
+#local("p-adic/index.typst") \

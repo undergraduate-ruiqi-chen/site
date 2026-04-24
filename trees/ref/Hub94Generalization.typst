@@ -1,0 +1,31 @@
+
+#import "../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  author: [Huber, Rupert],
+  title: [A generalization of formal schemes and rigid analytic varieties],
+  taxon: "Reference",
+  journal: [Mathematische Zeitschrift],
+  date: [September 1994],
+  volume: [217],
+  pages: [513--551],
+  doi: [10.1007/BF02571959],
+  url: "https://doi.org/10.1007/BF02571959",
+  issn: [1432-1823],
+))
+
+```
+@article{huber1993continuous,
+  author  = {Huber, Rupert},
+  title   = {A generalization of formal schemes and rigid analytic varieties},
+  journal = {Mathematische Zeitschrift},
+  year    = {September 1994},
+  volume  = {217},
+  pages   = {513--551},
+  doi     = {10.1007/BF02571959},
+  url     = {https://doi.org/10.1007/BF02571959},
+  issn    = {1432-1823}
+}
+```

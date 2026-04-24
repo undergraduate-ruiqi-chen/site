@@ -1,0 +1,10 @@
+
+#import "../../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  title: [$p$-adic world],
+))
+
+#embed("Geometry/index.typst", [$p$-adic geometry]) \

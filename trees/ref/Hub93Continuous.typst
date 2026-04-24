@@ -1,0 +1,31 @@
+
+#import "../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  author: [Huber, Rupert],
+  title: [Continuous valuations],
+  taxon: "Reference",
+  journal: [Mathematische Zeitschrift],
+  date: [January 1993],
+  volume: [212],
+  pages: [455--477],
+  doi: [10.1007/BF02571668],
+  url: "https://doi.org/10.1007/BF02571668",
+  issn: [1432-1823],
+))
+
+```
+@article{huber1993continuous,
+  author  = {Huber, Rupert},
+  title   = {Continuous valuations},
+  journal = {Mathematische Zeitschrift},
+  year    = {January 1993},
+  volume  = {212},
+  pages   = {455--477},
+  doi     = {10.1007/BF02571668},
+  url     = {https://doi.org/10.1007/BF02571668},
+  issn    = {1432-1823}
+}
+```

@@ -1,0 +1,11 @@
+
+#import "_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  "title": [index],
+))
+
+Wiki pages #local("/wiki/index.typst") \
+

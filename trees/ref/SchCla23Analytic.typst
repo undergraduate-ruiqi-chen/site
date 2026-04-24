@@ -1,0 +1,21 @@
+
+#import "../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  author: [Scholze, Peter and Clausen, Dustin],
+  title: [Analytic stacks],
+  taxon: "Reference",
+  year: [2023],
+  url: "https://people.mpim-bonn.mpg.de/scholze/AnalyticStacks.html",
+))
+
+```
+@article{scholzeclausen2023analytic,
+  author  = {Scholze, Peter and Clausen, Dustin},
+  title   = {Analytic stacks},
+  year    = {2023},
+  url     = {https://people.mpim-bonn.mpg.de/scholze/AnalyticStacks.html}
+}
+```

@@ -1,0 +1,18 @@
+
+#import "../../../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  title: [Cartesian space],
+))
+
+Write $serif("CartSp")$ for the category whose
+- objects are Cartesian space $RR^n$
+- morphisms are suitable structure-preserving functions between these spaces.
+For definiteness we write
+- $serif("CartSp")_"lin"$ for linear functions
+- $serif("CartSp")_"top"$ for continuous functions
+- $serif("CartSp")_"smooth"$ for smooth functions
+
+

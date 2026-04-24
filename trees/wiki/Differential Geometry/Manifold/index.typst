@@ -1,0 +1,10 @@
+
+#import "../../../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  title: [Manifold],
+))
+
+#local("Cartesian Space.typst")

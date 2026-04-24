@@ -1,0 +1,10 @@
+
+#import "../../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  title: [Differential Geometry],
+))
+
+#embed("Manifold/index.typst", [Manifold]) \

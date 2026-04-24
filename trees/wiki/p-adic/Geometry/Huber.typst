@@ -1,0 +1,89 @@
+
+#import "../../../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  title: [Huber ring],
+))
+
+= Definition of Huber ring
+A topological ring $A$ is Huber if there exists an open subring $A_0 subset A$ which is adic with respect to a finitely generated ideal $I subset A_0$ of definition. Such $A_0 subset A$ is called a ring of definition.We make following definitions:
+
+- A subset $S subset A$ of a topological ring is bounded if for all open neighbourhoods $U$ of $0$ there exists an open neighborhood $V$ of $0$ such that $V S subset U$.
+- An element $x in A$ is power-bounded if ${x^n}_(n>=0)$ is bounded.
+- An element $x in A$ is topologically nilpotent if ${x^n}_(n>=0)$ converges to $0$.
+- $A^circle subset A$ is the set of power-bounded elements and $A^(circle circle)$ is the set of topologically nilpotent elements.
+- A Huber ring is Tate if it contains a pseudo-uniformizer, that is, a topologically nilpotent unit $g in A$.
+-  A Huber ring $A$ is uniform if $A^circle$ is bounded.
+Fix a Huber ring $A$, the following holds:
+- A subring $A_0 subset A$ is a ring of definition if and only if it is open and bounded, see #local("/ref/Hub93Continuous.typst", text: [Continuous valuations, Proposition 1]).
+- $A^circle$ is an integrally closed open subring of $A$ and $A^(circle circle)$ is an open radical ideal of $A^(circle)$.
+- For any ring of definition $A_0$ with a finitely generated ideal $I$ of definition, $A_0$ is contained in $A^circle$ and $I$ is contained in $A^(circle circle)$.
+- The ring $A^circle$ is the filtered union of the rings of definition $A_0 subset A^circle$.
+- The ideal $A^(circle circle)$ is the filtered union of the ideals of definition $I subset A_0 subset A^circle$.
+- If $A$ is separated, Tate, and uniform, then $A$ is reduced.
+
+A subring $A^+ subset A$ is a ring of integral elements if it is open and integrally closed in $A$, and $A^+ subset A^circle$. A Huber pair is a pair $(A, A^+)$ where $A$ is Huber and $A^+$ is a ring of integral elements.
+
+= The adic spectrum of a Huber pair
+The adic spectrum $op("Spa")(A, A^+)$ of a Huber pair $(A, A^+)$ is the set of equivalence classes of continuous valuations $abs(-) : A -> Gamma union {0}$ for totally ordered Abelian group $Gamma$ on $A$ such that $abs(A^+) <= 1$. $op("Spa")(A, A^+)$ is equipped with a topology basis for $t,u in A$:
+$
+  {x mid(|) abs(t(x)) <= abs(u(x)) != 0}
+$
+Let $(hat(A),hat(A)^+)$ be the completion of the Huber pair $(A, A^+)$ then:
+- $op("Spa")(A, A^+)$ is spectral, see #local("/ref/Hub93Continuous.typst", text: [Continuous valuations, Theorem 3.5.i]).
+- the natural map
+  $
+    op("Spa")(hat(A),hat(A)^+) -> op("Spa")(A, A^+)
+  $ 
+  becomes a homeomorphism, see #local("/ref/Hub93Continuous.typst", text: [Continuous valuations, Proposition 3.9]).
+- $op("Spa")(A, A^+)$ is non-empty whenever $hat(A) != 0$, see #local("/ref/Hub93Continuous.typst", text: [Continuous valuations, Proposition 3.6.i]).
+- $f in hat(A)^+$ if and only if $abs(f(x)) <= 1$ for all $x in op("Spa")(A, A^+)$, see #local("/ref/Hub93Continuous.typst", text: [Continuous valuations, Lemma 3.3.i]).
+- $f in hat(A)^times$ if and only if $abs(f(x)) != 0$ for all $x in op("Spa")(A, A^+)$.
+
+We may define open subsets $U(T/s) subset op("Spa")(A, A^+)$ called rational subsets:
+$
+  U(T/s) := {x mid(|) abs(t(x)) <= abs(u(x)) != 0, forall t in T} = inter.big_(t in T) {x mid(|) abs(t(x)) <= abs(u(x)) != 0}
+$
+when $s in A$ and $T subset A$ a finite subset such that $T A subset A$ is open. Then the intersection:
+$
+  U(T_1/s_1) inter U(T_2/s_2) = U((T_1 T_2 union T_1 s_2 union s_1 T_2)/(s_1 s_2))
+$
+is still rational. Given rational subset $U subset op("Spa")(A, A^+)$ there exists an universal complete Huber pair $(A lr(chevron.l T/s chevron.r), A lr(chevron.l T/s chevron.r)^+)$ with $(A, A^+) -> (A lr(chevron.l T/s chevron.r), A lr(chevron.l T/s chevron.r)^+)$ such that:
+$
+  op("Spa")(A lr(chevron.l T/s chevron.r), A lr(chevron.l T/s chevron.r)^+) -> op("Spa")(A, A^+)
+$
+factors through $U$. Moreover, $op("Spa")(A lr(chevron.l T/s chevron.r), A lr(chevron.l T/s chevron.r)^+)$ is naturally homeomorphic to $U$, see #local("/ref/Hub94Generalization.typst", text: [A generalization of formal schemes and rigid analytic varieties, Proposition 1.3]).
+
+We're now able to define two presheaf of topological rings:
+$
+  scr(O)_(op("Spa")(A, A^+))(W) & := lim_(U(T/s) subset W) A lr(chevron.l T/s chevron.r) \
+  scr(O)_(op("Spa")(A, A^+))^+(W) & := lim_(U(T/s) subset W) A lr(chevron.l T/s chevron.r)^+ \
+  & = {f in scr(O)_(op("Spa")(A, A^+))(W) mid(|) abs(f(x)) <= 1, forall x in W}
+$
+A Huber pair is called sheafy if $scr(O)_X$ is a sheaf of topological rings, whence $scr(O)_X^+ subset scr(O)_X$ is automatically a subsheaf of topological rings.
+
+= Generalization and examples
+In #local("/ref/SchCla23Analytic.typst", text: [Analytic stacks, lecture 7]), given solid ring $R in op("CAlg")(serif("Solid")_ZZ)$, $f in R(underline({*}))$ is called:
+- power-bounded, if $ZZ[T] -> R$ realize $R in serif("Solid")_(ZZ[T])$
+- topologically nilpotent, if $ZZ[T] -> R$ factors through $ZZ[|T|]$
+Then the set of power-bounded elements $R^circle subset R(underline({*}))$ is an integrally closed subring and the set of topologically nilpotent elements $R^(circle circle) subset R(underline({*}))$ is a radical ideal $R^(circle circle) subset R^circle$.
+
+Moreover, given $s in R(underline({*}))$ and $T subset R(underline({*}))$ a finite subset, there exists an initial solid ring (which is acturally the $pi_0$-part)
+$
+  R lr(chevron.l T/s chevron.r) := (R[x_1, ..., x_r]^(x_1^square, ..., x_r^square)/(s x_1 - t_1, ..., s x_r - t_r))[s^(-1)]
+$ 
+with respect to the properties:
+- $s$ is invertible in $R lr(chevron.l T/s chevron.r)$
+- $t_1/s, ..., t_r/s$ is power-bounded in $R lr(chevron.l T/s chevron.r)$
+Huber's definition $A lr(chevron.l T/s chevron.r)$ equals the "quasi-separation" of $R lr(chevron.l T/s chevron.r)$.
+
+Adic spaces encompass schemes, formal schemes, and rigid spaces, see #local("/ref/Hub94Generalization.typst", text: [A generalization of formal schemes and rigid analytic varieties, Theorem 2.2]).:
+- Schemes, any discrete ring $A$ is Huber and $scr(O)_(op("Spa")(hat(A), hat(A)^+))$ is sheafy.
+- Formal schemes, an adic ring is Huber if it has a finitely generated ideal $I$ of definition and $scr(O)_(op("Spa")(hat(A), hat(A)^+))$ is sheafy if $hat(A)$ is finitely generated over a noetherian ring of definition.
+- Rigid spaces, let $A_0$ be any ring and $g in A_0$ a non-zero divisor, then $A := A_0[g^(-1)]$ is Huber and $scr(O)_(op("Spa")(hat(A), hat(A)^+))$ is sheafy if $hat(A)$ is Tate and strongly noetherian, i.e.
+  $
+    hat(A) lr(chevron.l T_1, ..., T_r chevron.r) := {sum_(lambda in NN^r) a_lambda T^lambda mid(|) a_lambda in hat(A), a_lambda -> 0}
+  $
+  are noetherian for all $r >= 0$. 
