@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width"><title>p-adic world</title><link rel="icon" href="/assets/favicon.ico" /><template id="theme-option-template"><input type="radio" name="theme" /><label></label></template><script src="/main.js"></script><!-- Also see: https://katex.org/docs/autorender -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.css" integrity="sha384-UA8juhPf75SzzAMA/4fo3yOU7sBJ0om7SCD2GHq0fZqZco6tr1UCV7nUbk9J90JM" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.js" integrity="sha384-Tt7wBxLKwSzFVRET4O4U9H6v8MNaQ/CjN2FMP4xFm0ErrFu6aNqoonRVW5W40iGI" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
+<!-- Also see: https://github.com/KaTeX/KaTeX/tree/main/contrib/copy-tex -->
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/contrib/copy-tex.min.js" integrity="sha384-Pe2JWbaShhSRT0SESJ9XLPeAsi4yrNi7r/CiH0Coq7giBjK5a6Ae7XcybE8rNlQP" crossorigin="anonymous"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true },
+      ],
+      trust: true,
+      strict: false,
+      throwOnError: false,
+      minRuleThickness: 0.05,
+    });
+  });
+</script>
+<link rel="stylesheet" href="/main.css"><style>
+@media only screen and (min-width: 1000px) {
+  #grid-wrapper { grid-template-columns: var(--article-max-width) var(--toc-max-width); }
+  nav#toc { max-width: 45ex; }
+}
+</style><link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+</head><body><header class="header"><nav class="nav"><div class="logo"><span class="cursor-pointer" onclick="window.location.href='/index.html'" title="index">« index</span></div></nav></header><div id="grid-wrapper" style="grid-template-areas: 'article toc';" data-base-url="/"><nav id="toc" class="sticky-nav mobile-sticky-nav"><div id="theme-options"></div><div class="block"><details open=""><summary><h1>Table of Contents</h1></summary><ul class="block"><li class=""><a class="bullet" href="/wiki/p-adic/Geometry/index.html" title="p-adic geometry [wiki/p-adic/Geometry/index]">■</a><span class="link local" onclick="window.location.href='#wiki-p-adic-Geometry-index'"><span class="taxon"></span><span style="display: inline-block"><span class="typst-inline" style="vertical-align: -0.19400000000000003em;"><svg class="typst-frame" style="overflow: visible; width: 0.518em; height: 0.636em;" viewBox="0 0 5.698 6.996" width="5.698pt" height="6.996pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:h5="http://www.w3.org/1999/xhtml"><g><g class="typst-text" transform="matrix(1 0 0 -1 0 4.862)"><use xlink:href="#g4EE3BC033EF5B3919116EE5EF9D6BA58" x="0" y="0" fill="#000000" fill-rule="nonzero"/></g></g><defs id="glyph"><symbol id="g4EE3BC033EF5B3919116EE5EF9D6BA58" overflow="visible"><path d="M 0 0m 3.905 4.862 c -0.48399997 0 -0.9460001 -0.25299978 -1.3970001 -0.7589998 c -0.12099981 0.50600004 -0.4619999 0.7589998 -1.0009999 0.7589998 c -0.45099998 0 -0.78099996 -0.36299992 -1.012 -1.0780001 c -0.110000014 -0.36299992 -0.16500002 -0.572 -0.16500002 -0.638 c 0 -0.09899998 0.055000007 -0.1539998 0.176 -0.1539998 c 0.055000007 0 0.088 0.010999918 0.12099999 0.032999992 c 0.055000007 0.09899998 0.088 0.17599988 0.09900004 0.25299978 c 0.19800001 0.83599997 0.45100003 1.2540002 0.74799997 1.2540002 c 0.19799995 0 0.29700005 -0.15400028 0.29700005 -0.4510002 c 0 -0.16499996 -0.022000074 -0.35199976 -0.07700002 -0.54999995 l -1.21 -4.829 c -0.09900001 -0.36300004 -0.109999985 -0.40700006 -0.539 -0.40700006 c -0.19799998 0 -0.297 -0.08799994 -0.297 -0.2529999 c 0 -0.12100005 0.065999985 -0.17600012 0.187 -0.17600012 c 0.16499999 0 0.737 0.032999992 0.90199995 0.032999992 c 0.20899999 0 0.86899996 -0.032999992 1.078 -0.032999992 c 0.16500008 0 0.24199998 0.08800006 0.24199998 0.26400006 c 0 0.110000014 -0.09899998 0.16499996 -0.30799997 0.16499996 c -0.19799995 0 -0.495 -0.010999918 -0.495 0.12100005 c 0 0.143 0.4510001 1.87 0.495 2.057 c 0.22000003 -0.407 0.5500001 -0.616 0.9900001 -0.616 c 0.7149999 0 1.3419998 0.363 1.892 1.1 c 0.50600004 0.671 0.7589998 1.3859999 0.7589998 2.123 c 0 0.95700026 -0.572 1.7820001 -1.4849999 1.7820001 Z m -0.032999992 -0.32999992 c 0.42900014 0 0.6489999 -0.32999992 0.6489999 -0.9790001 c 0 -0.29699993 -0.065999985 -0.6930001 -0.1869998 -1.188 c -0.25300026 -0.957 -0.572 -1.584 -0.957 -1.903 c -0.23100019 -0.187 -0.44000006 -0.286 -0.64900017 -0.286 c -0.319 0 -0.53900003 0.143 -0.65999985 0.44 c -0.0990001 0.231 -0.15400004 0.39599997 -0.15400004 0.48400003 l 0.5609999 2.2989998 c 0.055000067 0.2420001 0.25300002 0.49500012 0.5610001 0.7479999 c 0.30799985 0.25300026 0.58299994 0.38500023 0.83599997 0.38500023 Z "/></symbol></defs></svg></span></span>-adic geometry</span></li></ul></details></div></nav>
+
+<article><section class="block" data-taxon=""><details open><summary id="wiki-p-adic-index"><header><h1><span class="taxon"></span>p-adic world <a class="slug" href="/wiki/p-adic/index.html">[wiki/p-adic]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <section class="block hide-metadata" data-taxon=""><details open><summary id="wiki-p-adic-Geometry-index"><header><h1><span class="taxon"></span><span style="display: inline-block"><span class="typst-inline" style="vertical-align: -0.19400000000000003em;"><svg class="typst-frame" style="overflow: visible; width: 0.518em; height: 0.636em;" viewBox="0 0 5.698 6.996" width="5.698pt" height="6.996pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:h5="http://www.w3.org/1999/xhtml"><g><g class="typst-text" transform="matrix(1 0 0 -1 0 4.862)"><use xlink:href="#g4EE3BC033EF5B3919116EE5EF9D6BA58" x="0" y="0" fill="#000000" fill-rule="nonzero"/></g></g><defs id="glyph"><symbol id="g4EE3BC033EF5B3919116EE5EF9D6BA58" overflow="visible"><path d="M 0 0m 3.905 4.862 c -0.48399997 0 -0.9460001 -0.25299978 -1.3970001 -0.7589998 c -0.12099981 0.50600004 -0.4619999 0.7589998 -1.0009999 0.7589998 c -0.45099998 0 -0.78099996 -0.36299992 -1.012 -1.0780001 c -0.110000014 -0.36299992 -0.16500002 -0.572 -0.16500002 -0.638 c 0 -0.09899998 0.055000007 -0.1539998 0.176 -0.1539998 c 0.055000007 0 0.088 0.010999918 0.12099999 0.032999992 c 0.055000007 0.09899998 0.088 0.17599988 0.09900004 0.25299978 c 0.19800001 0.83599997 0.45100003 1.2540002 0.74799997 1.2540002 c 0.19799995 0 0.29700005 -0.15400028 0.29700005 -0.4510002 c 0 -0.16499996 -0.022000074 -0.35199976 -0.07700002 -0.54999995 l -1.21 -4.829 c -0.09900001 -0.36300004 -0.109999985 -0.40700006 -0.539 -0.40700006 c -0.19799998 0 -0.297 -0.08799994 -0.297 -0.2529999 c 0 -0.12100005 0.065999985 -0.17600012 0.187 -0.17600012 c 0.16499999 0 0.737 0.032999992 0.90199995 0.032999992 c 0.20899999 0 0.86899996 -0.032999992 1.078 -0.032999992 c 0.16500008 0 0.24199998 0.08800006 0.24199998 0.26400006 c 0 0.110000014 -0.09899998 0.16499996 -0.30799997 0.16499996 c -0.19799995 0 -0.495 -0.010999918 -0.495 0.12100005 c 0 0.143 0.4510001 1.87 0.495 2.057 c 0.22000003 -0.407 0.5500001 -0.616 0.9900001 -0.616 c 0.7149999 0 1.3419998 0.363 1.892 1.1 c 0.50600004 0.671 0.7589998 1.3859999 0.7589998 2.123 c 0 0.95700026 -0.572 1.7820001 -1.4849999 1.7820001 Z m -0.032999992 -0.32999992 c 0.42900014 0 0.6489999 -0.32999992 0.6489999 -0.9790001 c 0 -0.29699993 -0.065999985 -0.6930001 -0.1869998 -1.188 c -0.25300026 -0.957 -0.572 -1.584 -0.957 -1.903 c -0.23100019 -0.187 -0.44000006 -0.286 -0.64900017 -0.286 c -0.319 0 -0.53900003 0.143 -0.65999985 0.44 c -0.0990001 0.231 -0.15400004 0.39599997 -0.15400004 0.48400003 l 0.5609999 2.2989998 c 0.055000067 0.2420001 0.25300002 0.49500012 0.5610001 0.7479999 c 0.30799985 0.25300026 0.58299994 0.38500023 0.83599997 0.38500023 Z "/></symbol></defs></svg></span></span>-adic geometry <a class="slug" href="/wiki/p-adic/Geometry/index.html">[wiki/p-adic/Geometry]</a></h1><div class="metadata"><ul></ul></div></header></summary>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    
+    <p><span class="link local"><a href="/wiki/p-adic/Geometry/Huber.html" title="Huber ring [wiki/p-adic/Geometry/Huber]">Huber ring</a></span><br><span class="link local"><a href="/wiki/p-adic/Geometry/Adic.html" title="Adic space [wiki/p-adic/Geometry/Adic]">Adic space</a></span></p>
+  </body>
+</details></section>
+    <p><br></p>
+  </body>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="" style="margin-bottom: 0.4em;"><header><h1><span class="taxon"></span>Wiki index <a class="slug" href="/wiki/index.html">[wiki]</a></h1><div class="metadata"><ul></ul></div></header></section></details></section></footer></article></div></body></html>
