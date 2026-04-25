@@ -1,0 +1,10 @@
+
+#import "../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  title: [Notes for seminars],
+))
+
+#embed("Mathematical Physics/index.typst", [Mathematical physics])

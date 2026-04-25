@@ -1,0 +1,49 @@
+
+#import "../../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  title: [Counting rational curves on P2],
+  taxon: [Document]
+))
+
+Let $X := PP^2$, which is convex and hence stable rational curves on $X$ have no obstruction. We study the Gromov--Witten invariants $omega_(0,n,d)^(PP^2)$. Here $H^(bullet)(PP^2) = QQ plus.o QQ H plus.o H^2$ and $d$ equals to the degree of the rational curve. Since $K_PP^2 = - 3 H$, the virtual dimension 
+$
+  "virdim" = n - [C] [K_(PP^2)] + (1 - g)(dim PP^2 - 3) = n + 3 d - 1
+$
+According to divisor axiom, the only non-vanshing Gromov--Witten invariants are given by:
+$
+  omega_(0,n,d)^(PP^2)(H^2,...,H^2, H, ..., H) = d^(n - 3 d + 1) K_d
+$
+where there are $3 d - 1$ $H^2$ terms and $n - 3 d + 1$ $H$ terms, $K_d$ is the number of rational curves of degree $d$ passing through $3 d - 1$ points in $PP^2$. The Gromov--Witten potential:
+$
+  Phi(t_0 1 + t_1 H + t_2 H^2) & = 1/6 omega_(0,3,0)^(PP^2) + sum_(d >= 1) sum_(n >= 3) 1/n! omega_(0,n,d)^(PP^2) q^d \
+  & = 1/2 t_0^2 t_2 + 1/2 t_0 t_1^2 + sum_(d >= 1) K_d t_2^(3d-1)/(3d-1)! e^(d t_1) q^d
+$
+From the associativity of big quantum product, we have:
+$
+  (H * H) * H^2 & = H * (H * H^2) \
+  H * H & = H^2 + Phi_(111)H + Phi_(112)1 \
+  H * H^2 & = Phi_(112)H + Phi_(122)1
+$
+The coefficients of $1$ on both sides gives equality:
+$
+  Phi_(222) + Phi_(111) Phi_(122) = Phi_(112)^2
+$
+Compare the coefficients of $t_2^(3 d - 1) q^d$ on both sides, we obtain a recursion formula for $K_d$:
+$
+  K_d & = sum_(d_1 + d_2 = d) K_(d_1) K_(d_2) (d_1^2 d_2^2 binom(3 d - 4, 3 d_1 - 2) - d_1^3 d_2 binom(3 d - 4, 3 d_1 - 1)) 
+$
+with initial condition $K_1 = 1$. The first few values of $K_d$ can be found in #external("https://oeis.org/A013587", "A013587"):
+$
+  K_1 & = 1 \
+  K_2 & = 1 \
+  K_3 & = 12 \
+  K_4 & = 620 \
+  K_5 & = 87304 \
+  K_6 & = 26312976
+$
+
+
+

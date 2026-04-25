@@ -1,0 +1,10 @@
+
+#import "../../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  title: [Mathematical physics],
+))
+
+#local("Rational curves on P2.typst")
