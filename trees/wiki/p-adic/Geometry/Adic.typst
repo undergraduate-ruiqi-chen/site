@@ -29,3 +29,4 @@ $
 The category of adic spaces forms a full subcategory of the category of pre-adic spaces, which allows non-sheafy Huber pairs.
 
 = Analytic adic spaces
+A point $x in op("Spa")(A, A^+)$ is non-analytic if the kernel of $abs(-(x))$ is open. Otherwise $x$ is analytic.
