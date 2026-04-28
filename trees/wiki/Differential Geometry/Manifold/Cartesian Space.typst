@@ -4,7 +4,7 @@
 #show: kodama
 
 #metadata((
-  title: [Cartesian space],
+  title: "Cartesian space",
 ))
 
 Write $serif("CartSp")$ for the category whose

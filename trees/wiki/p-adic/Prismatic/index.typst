@@ -1,0 +1,12 @@
+
+#import "../../../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  title: "Prismatic cohomology",
+))
+
+#local("Witt.typst") \
+#local("delta-rings.typst") \
+

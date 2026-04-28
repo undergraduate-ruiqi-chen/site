@@ -1,0 +1,42 @@
+
+#import "../../../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  title: "δ-rings",
+))
+
+#subtree(
+  title: "Definition of δ-rings",
+  taxon: "section"
+)[
+A $delta$-ring is a is a commutative ring $R$ equipped with $delta : R -> R$ such that:
+$
+  delta(0) & = 0 \
+  delta(1) & = 0 \
+  delta(x y) & = x^p delta(y) + y^p delta(x) + p delta(x) delta(y) \
+  delta(x + y) & = delta(x) + delta(y) + p^(-1)(x^p + y^p - (x + y)^p)
+$
+#subtree(
+  taxon: [Remark]
+)[
+  Given any $delta$-ring $R$, we construct the associated Frobenius lift:
+  $
+    phi(x) & := x^p + p delta(x)
+  $
+  Then $phi$ is a ring homomorphism that lifts Frobenius on $R times.o_ZZ FF_p$. Converse make sense if $R$ is $p$-torsion free. In particular, if $R$ is over $QQ$, then a $delta$-ring is just a ring with endomorphism $phi$.
+]
+Recall the theory of #local("trees/wiki/p-adic/Prismatic/Witt.typst").
+#subtree(
+  taxon: [Remark]
+)[
+  A $delta$-ring structure on $R$ is exactly a section of the projection $W_2(R) -> R$.
+]
+
+#subtree(
+  taxon: [Remark]
+)[
+  Recall in #local("trees/wiki/p-adic/Prismatic/Witt.typst"),
+]
+]

@@ -4,7 +4,7 @@
 #show: kodama
 
 #metadata((
-  title: [Manifold],
+  title: "Manifold",
 ))
 
 #local("Cartesian Space.typst")

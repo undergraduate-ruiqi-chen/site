@@ -4,8 +4,8 @@
 #show: kodama
 
 #metadata((
-  title: [Counting rational curves on P2],
-  taxon: [Document]
+  title: "Counting rational curves on P2",
+  taxon: "Document"
 ))
 
 Let $X := PP^2$, which is convex and hence stable rational curves on $X$ have no obstruction. We study the Gromov--Witten invariants $omega_(0,n,d)^(PP^2)$. Here $H^(bullet)(PP^2) = QQ plus.o QQ H plus.o H^2$ and $d$ equals to the degree of the rational curve. Since $K_PP^2 = - 3 H$, the virtual dimension 

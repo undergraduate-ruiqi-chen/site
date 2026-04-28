@@ -4,7 +4,7 @@
 #show: kodama
 
 #metadata((
-  title: [Mathematical physics],
+  title: "Mathematical physics",
 ))
 
 #local("Rational curves on P2.typst")

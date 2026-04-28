@@ -1,0 +1,185 @@
+
+#import "../../../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  title: "Witt vectors",
+))
+
+#subtree(
+  title: "Definition of Witt ring",
+  taxon: "section"
+)[
+Let $R$ be a commutative ring, a (universal) Witt vector on $R$ is a sequence:
+$
+  a := {a_i}_(i>0) in W(R) := R^(ZZ_(>0))
+$
+We have a bijection between $W(R)$ and $1 + t R[|t|]$:
+$
+  f_(a) := product_(n>0) (1 - a_n t^n) in 1 + t R[|t|]
+$
+We can define three polynomials:
+$
+  f_S & := product_(n>0) (1 - S_n t^n) = product_(n>0) (1 - x_n t^n)(1 - y_n t^n) \
+  f_P & := product_(n>0) (1 - P_n t^n) = product_(p,q,r>0 \ p,q "coprime") (1 - x_(p r)^(q) y_(q r)^p t^(p q r))^(r) \
+  f_M & := product_(n>0) (1 - M_n t^n) = product_(n>0) (1 - x_n t^n)^(-1)
+$
+where:
+$
+  S_n, P_n in ZZ[{x_i}_(i > 0), {y_i}_(i > 0)] \
+  M_n in ZZ[{x_i}_(i > 0)] \
+$
+Let $a^((n)) in R$ be the $n$-th ghost component of $a$ defined as follows:
+$
+  sum_(n>0) a^((n)) t^n & := - t partial_t log f_a \
+  a^((n)) & := sum_(p q = n) p a_p^q
+$
+Then for every $a, b in W(R)$, we have:
+$
+  S(a,b)^((n)) & = a^((n)) + b^((n)) \
+  P(a,b)^((n)) & = a^((n)) b^((n)) \
+  M(a)^((n)) & = - a^((n))
+$
+For the proof, verify the identity when $R = ZZ[{x_i}_(i > 0), {y_i}_(i > 0)]$ or $R = ZZ[{x_i}_(i > 0)]$, which follows from direct calculation. 
+#subtree(
+  title: "Witt ring",
+  taxon: "theorem"
+)[
+  Let $N subset ZZ_(>0)$ closed under divisors, then there exists a unique family of polynomials:
+  $
+    {S_n, P_n in ZZ[{x_d}_(d divides n), {y_d}_(d divides n)]}_(n in N)
+  $
+  which coincides with $S_n, P_n$ constructed above, such that for all commutative ring $R$:
+  - $W_(N)(R) := R^N$ admits a ring structure as follows:
+    $
+      a + b & = S(a, b) \
+      a b & = P(a, b)
+    $
+  - The $n$-th ghost component $(-)^((n)) : W_(N)(R) -> R$ is a ring homomorphism for all $n in N$.
+]
+
+#proof()[
+  The equality $S(a,b)^((n)) = a^((n)) + b^((n))$ and $P(a,b)^((n)) = a^((n)) b^((n))$ unfolded as:
+  $
+    n S_(n)(a,b) + sum_(p q = n \ p != n) p S_(p)(a,b)^q & = sum_(p q = n) p a_(p)^(q) + sum_(p q = n) p b_(p)^(q) \
+    n P_(n)(a,b) + sum_(p q = n \ p != n) p P_(p)(a,b)^q & = (sum_(p q = n) p a_(p)^(q))(sum_(p q = n) p b_(p)^(q)) \
+  $
+  Flat base change to $QQ$ to prove uniqueness of $S_n, P_n$ and $S_n, P_n in ZZ[{x_d}_(d divides n), {y_d}_(d divides n)]$.
+]
+
+#subtree(
+  taxon: "corollary"
+)[
+  - If $N$ is invertible in $R$, then $(-)^((n))$ defines isomorphism $W_(N)(R) = R^N$.
+  - Given inclusion $M subset N$, the projection defines a natural transformation $W_N -> W_M$.
+  - If $N = union.big_(i in I) N_i$ a filtered union, then $W_N = lim W_(N_i)$.
+  - If $m in M$ and $n in N$ are always coprime, then $W_(M) compose W_(N) = W_(M N)$.
+]
+
+We further define the big Witt ring $W(R)$ and the $p$-Witt ring $W_(p)(R) := W_({1,p,...})(R)$.
+]
+
+// #subtree(
+//   title: "Construction of Witt ring",
+//   taxon: "section"
+// )[
+//   Given $a := {a_i}_(i > 0) in W(R)$, the ghost components admit a generating function:
+//   $
+//     f_a & := product_(n>0) (1 - a_n t^n) in 1 + t R[|t|] \
+//     sum_(n>0) a^((n)) t^n & = - t partial_t log f_a
+//   $
+//   Moreover, $f_a$ defines a bijection between $W(R)$ and $1 + t R[|t|]$. To construct
+// ]
+
+#subtree(
+  title: "Verschiebung map, Frobenius homomorphism and Teichmüller lifting",
+  taxon: "section"
+)[
+
+#subtree(
+  title: "Verschiebung map"
+)[
+Given $n in ZZ_(> 0)$, we may define the verschiebung map:
+$
+  V_n & : W_(N slash n)(R) -> W_(N)(R) \
+  V_n & : {a_i}_(i in N slash n) mapsto {a_(i) = (a_(j) "if" i = j n "else" 0)}_(i in N)
+$
+The verschiebung map satisfy:
+$
+  V_(n)(a)^((i)) & = (n a^((j)) "if" i = j n "else" 0) \
+  V_(n)(a) + V_(n)(b) & = V_(n)(a + b) \
+  V_(n)(a) V_(n)(b) & = n V_(n)(a b) \
+  V_(m)V_(n)(a) & = V_(m n)(a)
+$
+In particular, $V_(n)(W_(N slash n)) subset W_(N)$ defines an ideal. 
+]
+
+#subtree(
+  title: "Frobenius homomorphism"
+)[
+Fix $u in ZZ_(>0)$, we define polynomials $F_(u,n) in ZZ[{x_(i)}_(i>0)]$:
+$
+  f_(F_u)(t^(u)) := product_(n in ZZ_(>0))(1 - F_(u,n)t^(u n)) = product_(k=1)^(u) f_(x)(zeta_u^k t)
+$
+Then there exists a unique family of polynomials:
+$
+  {F_(u,n) in ZZ[{x_d}_(d divides u n)]}
+$ 
+which coincides with $F_(u)$ constructed above, such that for all commutative ring $R$ and $a in W(R)$, we have:
+$
+  F_(u)(a)^((n)) & = a^((u n))
+$
+The Frobenius homomorphism $F_(u) : W_(N)(R) -> W_(N slash u)(R)$ satisfy:
+$
+  F_(u)(1) & = 1 \
+  F_(u)(a + b) & = F_(u)(a) + F_(u)(b) \
+  F_(u)(a b) & = F_(u)(a) F_(u)(b) \
+  F_(u v)(a) & = F_(u)F_(v)(a) \
+  V_(u)(F_(u)(a) b) & = a V_(u)(b) \
+  F_(u)V_(u)(a) & = u a
+$
+Moreover, when $u,v$ are coprime to each other, then $F_(u)V_(v)(a) = V_(v)F_(u)(a)$. In the context of $p$-Witt ring, we will use $F = F_p$ the Frobenius homormophism.
+
+#subtree(
+  taxon: "theorem"
+)[
+  When $R$ is defined over $FF_p$, then:
+  - $F_(p)V_(p)(a) = V_(p)F_(p)(a) = p a$
+  - $F_(p) = W(F) : W(R) -> W(R)$ is induced by Frobenius $F : R -> R$.
+]
+]
+
+#subtree(
+  title: "Teichmüller lifting"
+)[
+The Teichmüller lifting $a mapsto [a] := (a, 0, 0, ...)$ is multiplicative due to 
+$
+  [x y]^((n)) = [x]^((n))[y]^((n)) = x^n y^n
+$
+Moreover, for every $w in W_(N)(R)$, there exists ${a_n in R}_(n in N)$ such that:
+$
+  w = sum_(n in N) V_n [a_n]
+$
+]
+]
+
+#subtree(
+  title: "Examples",
+  taxon: "section"
+)[
+The $p$-Witt vector $W_(p)(FF_(p^n))$ of $FF_(p^n)$ is the ring of integers of the unique unramified extension of $QQ_p$ of degree $n$.
+
+#subtree(
+  taxon: "theorem"
+)[
+  The $p$-Witt vector functor defines an equivalence between the category of perfect ring over $FF_p$ and the category of strict $p$-ring, inverse to the functor given by residue ring.
+]
+
+#proof()[
+  Recall that a strict $p$-ring is a $p$-adically complete ring $A$ over $ZZ_((p))$ with perfect residue ring $A times.o_ZZ FF_p$. The multiplicative Teichmüller lifting $A times.o_ZZ FF_p -> A$ equals:
+  $
+    [x] = lim_(n -> infinity) (x^(p^(-n)))^(p^n)
+  $
+]
+]

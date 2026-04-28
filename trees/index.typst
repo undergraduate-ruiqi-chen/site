@@ -4,7 +4,7 @@
 #show: kodama
 
 #metadata((
-  "title": [index],
+  "title": "index",
 ))
 
 #local("/wiki/index.typst", text: [Wiki pages]) \
