@@ -5,8 +5,8 @@
 
 #metadata((
   author: [Scholze, Peter and Clausen, Dustin],
-  title: [Analytic stacks],
-  taxon: "Reference",
+  title: "Analytic stacks",
+  taxon: "reference",
   year: [2023],
   url: "https://people.mpim-bonn.mpg.de/scholze/AnalyticStacks.html",
 ))

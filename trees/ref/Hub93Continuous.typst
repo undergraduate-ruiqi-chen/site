@@ -4,11 +4,11 @@
 #show: kodama
 
 #metadata((
-  author: [Huber, Rupert],
-  title: [Continuous valuations],
-  taxon: "Reference",
+  author: [Huber, Roland],
+  title: "Continuous valuations",
+  taxon: "reference",
   journal: [Mathematische Zeitschrift],
-  date: [January 1993],
+  year: [1993],
   volume: [212],
   pages: [455--477],
   doi: [10.1007/BF02571668],
@@ -18,10 +18,10 @@
 
 ```
 @article{huber1993continuous,
-  author  = {Huber, Rupert},
+  author  = {Huber, Roland},
   title   = {Continuous valuations},
   journal = {Mathematische Zeitschrift},
-  year    = {January 1993},
+  year    = {1993},
   volume  = {212},
   pages   = {455--477},
   doi     = {10.1007/BF02571668},

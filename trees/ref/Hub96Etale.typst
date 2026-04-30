@@ -1,0 +1,31 @@
+
+#import "../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  author: [Huber, Roland],
+  title: "Étale cohomology of rigid analytic varieties and adic spaces",
+  taxon: "reference",
+  series: [Aspects of Mathematics],
+  year: [1996],
+  volume: [30],
+  pages: [X, 450],
+  doi: [10.1007/978-3-663-09991-8],
+  url: "https://doi.org/10.1007/978-3-663-09991-8",
+  issn: [0179-2156],
+))
+
+```
+@article{huber1996etale,
+  author  = {Huber, Roland},
+  title   = {Étale Cohomology of Rigid Analytic Varieties and Adic Spaces},
+  series = {Aspects of Mathematics},
+  year    = {1996},
+  volume  = {30},
+  pages   = {X, 450},
+  doi     = {10.1007/978-3-663-09991-8},
+  url     = {https://doi.org/10.1007/978-3-663-09991-8},
+  issn    = {0179-2156}
+}
+```

@@ -1,0 +1,26 @@
+
+#import "../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  author: [Kedlaya, Kiran and Liu, Ruochuan],
+  title: "Relative p-adic Hodge theory, I: Foundations",
+  taxon: "reference",
+  series: [Astèrisque],
+  year: [2015],
+  volume: [371],
+  pages: [239]
+))
+
+
+```
+@book{kedlayaliu2015relativeI,
+    author = {Kedlaya, Kiran and Liu, Ruochuan},
+    title = {Relative p-adic Hodge theory, I: Foundations},
+    series = {Astèrisque},
+    volume = {371},
+    year = {2015},
+    pages = {239}
+}
+```

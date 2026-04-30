@@ -4,11 +4,11 @@
 #show: kodama
 
 #metadata((
-  author: [Huber, Rupert],
-  title: [A generalization of formal schemes and rigid analytic varieties],
-  taxon: "Reference",
+  author: [Huber, Roland],
+  title: "A generalization of formal schemes and rigid analytic varieties",
+  taxon: "reference",
   journal: [Mathematische Zeitschrift],
-  date: [September 1994],
+  year: [1994],
   volume: [217],
   pages: [513--551],
   doi: [10.1007/BF02571959],
@@ -18,7 +18,7 @@
 
 ```
 @article{huber1993continuous,
-  author  = {Huber, Rupert},
+  author  = {Huber, Roland},
   title   = {A generalization of formal schemes and rigid analytic varieties},
   journal = {Mathematische Zeitschrift},
   year    = {September 1994},
