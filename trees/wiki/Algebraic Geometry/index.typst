@@ -1,0 +1,11 @@
+
+#import "../../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  title: "Algebraic Geometry",
+))
+
+#local("Spectral Space.typst")
+

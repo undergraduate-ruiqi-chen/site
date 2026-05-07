@@ -8,4 +8,6 @@
 ))
 
 #local("Differential Geometry/index.typst") \
+#local("Algebraic Geometry/index.typst") \
+#local("Algebraic Number Theory/index.typst") \
 #local("p-adic/index.typst") \

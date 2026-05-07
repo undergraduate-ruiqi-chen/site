@@ -1,0 +1,43 @@
+
+#import "../../../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  title: "Ramification groups",
+))
+
+// Let $(L, lambda, pi.alt)$ and $(K, kappa, pi)$ be local fields and $L slash K$ a finite Galois extension, we write $U_L^((0)) = cal(O)_L^times$ and $U_L^((s)) = 1 + pi.alt^s cal(O)_L$ for $s >= 1$ and $p$ the character of the residue field.
+
+// There exists a surjection of Galois groups $G_(K slash L) -> G_(lambda slash kappa)$ whose kernel is a normal subgroup called the inertia group $I_(K slash L) subset G_(K slash L)$. For every $s >= -1$ we define the $s$-th ramification group which is independent of $pi.alt$:
+// $
+//   I_(L slash K, s) := {sigma in G_(L slash K) mid(|) sigma(x) - x in pi.alt^(s+1) cal(O)_L, forall x in cal(O)_L}
+// $
+// Then $I_(L slash K, -1) = G_(L slash K)$ and $I_(L slash K, 0) = I_(L slash K)$. $R_(L slash K) := I_(L slash K, 1)$ is called the ramification group and $I_(L slash K, s)$ are called higher ramification groups. For $s >= 0$, the mapping:
+// $
+//   I_(L slash K, s)/I_(L slash K, s+1) & -> U_L^((s))/U_L^((s+1)) \
+//   sigma & mapsto sigma(pi.alt)/pi.alt
+// $
+// is injective and independent of $pi.alt$. In particular, $R_(L slash K)$ is the Sylow $p$-subgroup of $I_(L slash K)$.
+
+// Let $g_s = abs(I_(L slash K, s))$. We now define a piecewise linear $phi_(L slash K) : [-1, infinity) -> [-1, infinity)$ by:
+// - $phi(0) = 0$
+// - The slope on $(s, s+1)$ equals $g_(s+1)/g_0$.
+// Or if we define $I_(L slash K, s) = I_(L slash K, ceil(s))$ for $s in RR$, we have:
+// $
+//   phi(t) = integral_0^t (d s)/([I_(L slash K, 0) : I_(L slash K, s)])
+// $
+// So that we are able to introduce the upper numbering $I_(L slash K)^(u) := I_(L slash K, phi^(-1)(u))$.
+
+// #subtree(
+//   taxon: "proposition"
+// )[
+//   The upper numbering satisfy for finite Galois extensions $L slash M slash K$ of local fields, we have $I_(M slash K)^(u) = im(I_(L slash K)^u)$.
+// ]
+
+// #subtree(
+//   title: "Hasse–Arf",
+//   taxon: "theorem"
+// )[
+//   If $L slash K$ is Abelian (possibly infinite), then jumps in $I_(L slash K)^(u)$ are integers.
+// ]

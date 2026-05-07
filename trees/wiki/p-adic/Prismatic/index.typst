@@ -4,7 +4,7 @@
 #show: kodama
 
 #metadata((
-  title: "Prismatic cohomology",
+  title: "Prismatic Cohomology",
 ))
 
 #local("Witt.typst") \

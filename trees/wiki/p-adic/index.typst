@@ -4,8 +4,8 @@
 #show: kodama
 
 #metadata((
-  title: "p-adic world",
+  title: "p-adic World",
 ))
 
-#embed("Geometry/index.typst", [p-adic geometry]) \
-#embed("Prismatic/index.typst", [Prismatic cohomology]) \
+#embed("Geometry/index.typst", [p-adic Geometry]) \
+#embed("Prismatic/index.typst", [Prismatic Cohomology]) \

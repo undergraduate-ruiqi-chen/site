@@ -4,8 +4,9 @@
 #show: kodama
 
 #metadata((
-  title: "p-adic geometry",
+  title: "p-adic Geometry",
 ))
 
 #local("Huber.typst") \
-#local("Adic.typst")
+#local("Adic.typst") \
+#local("Perfectoid.typst") \

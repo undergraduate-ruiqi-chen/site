@@ -80,18 +80,6 @@ For the proof, verify the identity when $R = ZZ[{x_i}_(i > 0), {y_i}_(i > 0)]$ o
 We further define the big Witt ring $W(R)$ and the $p$-Witt ring $W_(p)(R) := W_({1,p,...})(R)$.
 ]
 
-// #subtree(
-//   title: "Construction of Witt ring",
-//   taxon: "section"
-// )[
-//   Given $a := {a_i}_(i > 0) in W(R)$, the ghost components admit a generating function:
-//   $
-//     f_a & := product_(n>0) (1 - a_n t^n) in 1 + t R[|t|] \
-//     sum_(n>0) a^((n)) t^n & = - t partial_t log f_a
-//   $
-//   Moreover, $f_a$ defines a bijection between $W(R)$ and $1 + t R[|t|]$. To construct
-// ]
-
 #subtree(
   title: "Verschiebung map, Frobenius homomorphism and Teichmüller lifting",
   taxon: "section"
@@ -168,12 +156,12 @@ $
   title: "Examples",
   taxon: "section"
 )[
-The $p$-Witt vector $W_(p)(FF_(p^n))$ of $FF_(p^n)$ is the ring of integers of the unique unramified extension of $QQ_p$ of degree $n$.
+The $p$-Witt ring $W_(p)(FF_(p^n))$ of $FF_(p^n)$ is the ring of integers of the unique unramified extension of $QQ_p$ of degree $n$.
 
 #subtree(
   taxon: "theorem"
 )[
-  The $p$-Witt vector functor defines an equivalence between the category of perfect ring over $FF_p$ and the category of strict $p$-ring, inverse to the functor given by residue ring.
+  The $p$-Witt ring functor defines an equivalence between the category of perfect ring over $FF_p$ and the category of strict $p$-ring, inverse to the functor given by residue ring.
 ]
 
 #proof()[
