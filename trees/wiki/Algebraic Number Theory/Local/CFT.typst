@@ -1,0 +1,171 @@
+
+#import "../../../_lib/kodama.typ": *
+
+#import "@preview/xarrow:0.4.0": xarrow
+
+#show: kodama
+
+#metadata((
+  title: "Class field theory",
+))
+
+#subtree(
+  title: "group cohomology",
+  taxon: "section"
+)[
+  #subtree(
+    title: "Group homology and cohomology",
+    taxon: "definition"
+  )[
+    Let $G$ be a finite group, we define two functors from the category of $G$-modules to the category of abelian groups:
+    - the left derived functors of the coinvariants functor $M |-> M_G$ are called the group homology $H_(i)(G, M)$;
+    - the right derived functors of the fixed point functor $M |-> M^G$ are called the group cohomology $H^(i)(G, M)$.
+    The induced modules $M = ZZ[G] times.o_ZZ N$ are always $H_(n)$-acyclic and the coinduced modules $M = hom_ZZ(ZZ[G], N)$ are always $H^(n)$-acyclic.
+  ]
+
+  #subtree(
+    title: "Tate cohomology groups",
+    taxon: "definition"
+  )[
+    Let $G$ be a finite group. The Tate cohomology $H_"T"^(n)(G, M)$ is defined as:
+    - If $n > 0$, then $H_"T"^(n)(G, M) = H^(n)(G, M)$;
+    - If $n = 0$, then $H_"T"^(0)(G, M) = op("coker")(N_(G))$;
+    - If $n = -1$, then $H_"T"^(-1)(G, M) = ker(N_(G))$;
+    - If $n < -1$, then $H_"T"^(n)(G, M) = H_(-n-1)(G, M)$.
+    where $N_(G)$ is the norm map $M_G -> M^G$ given by $N_(G)(m) := sum_(g in G) g m$.
+  ]
+
+  #subtree(
+    title: "Tate",
+    taxon: "theorem"
+  )[
+    Let $G$ be a finite group and $M$ be a $G$-module. If
+    $
+      H^(1)(H, M) = H^(2)(H, M) = 0
+    $
+    for all subgroups $H subset G$, then $H_"T"^(r)(G, M) = 0$ for all $r in ZZ$.
+  ]
+
+  #proof()[
+    - If $G$ is acyclic with generator $sigma$, consider the exact sequence:
+      $
+        0 -> M xarrow(m |-> sum_(g in G) g times.o m) ZZ[G] times.o M xarrow(g times.o m mapsto (sigma - 1)g times.o m) ZZ[G] times.o M xarrow(g times.o m mapsto sum m) M -> 0
+      $
+      Hence every generator $sigma in G$ determines an periodic isomorphism:
+      $
+        H_"T"^(n)(G, M) xarrow(~) H_"T"^(n+2)(G, M)
+      $
+    - If $G$ is solvable, let $H subset G$ be a proper normal subgroup with cyclic quotient. ...
+    - For general $G$, let $p$ be a prime and $G_p$ be a $p$-Sylow subgroup of $G$. We prove that the restriction map:
+      $
+        H^(r)(G, M) -> H^(r)(G_p, M)
+      $
+      is injective on the $p$-primary part of $H^(r)(G, M)$. ...
+    - Finally use the short exact sequence:
+      $
+        0 -> M' -> ZZ[G] times.o M -> M -> 0
+      $
+      to deduce the negative Tate cohomology groups.
+  ]
+
+  #subtree(
+    title: "Tate",
+    taxon: "theorem"
+  )[
+    Let $G$ be a finite group and $M$ be a $G$-module. If
+    - $H^(1)(H, M) = 0$;
+    - $H^(2)(H, M)$ is a cyclic group of order $abs(H)$
+    for all subgroups $H subset G$, then every generator of $H^2(G, M)$ determines an periodic isomorphism:
+    $
+      H_"T"^(n)(G, ZZ) xarrow(~) H_"T"^(n+2)(G, M)
+    $
+  ]
+
+  #proof()[
+    ...
+  ]
+]
+
+#subtree(
+  title: "local class field theory",
+  taxon: "section"
+)[
+  Let $K$ be a local field and $L$ unramified over $K$, then:
+  $
+    H^(2)(op("Gal")(L slash K), L^times) = H^(2)(op("Gal")(L slash K), ZZ) = H^(1)(op("Gal")(L slash K), QQ slash ZZ) = hom(op("Gal")(L slash K), QQ slash ZZ)
+  $
+  define $"inv"_(L slash K) : H^(2)(op("Gal")(L slash K), L^times) -> ([L : K])^(-1) ZZ slash ZZ$ by apply at Frobenius element $sigma in op("Gal")(L slash K)$.
+
+  By Tate's theorem, cup product with $u in H^(2)(G, L^times)$ induces an isomorphism:
+  $
+    H_"T"^(n)(G, ZZ) xarrow(~) H_"T"^(n+2)(G, L^times)
+  $
+  In particular, a local Artin map:
+  $
+    G = H_"T"^(-2)(G, ZZ) = H^(0)(G, L^times) = K^times slash N_(L slash K)(L^times)
+  $
+  where the Frobenius element $sigma in G$ is mapped to the uniformizer $pi_K in K^times$.
+
+  The inflation map $H^(2)(op("Gal")(K^"un" slash K), L^times) -> H^(2)(op("Gal")(K^"alg" slash K), L^times)$ is isomorphic.
+]
+
+  // Let $K$ be a field with absolute Galois group $G_K$. The étale topos $K_"ét"$ equals the topos $G_K"-"serif("Set")$ and the étale cohomology $H^(i)(K_"ét", -)$ is identified with the Galois cohomology $H^(i)(G_K, -)$.
+
+#subtree(
+  title: "theorems",
+  taxon: "section"
+)[
+  Let $K slash QQ_p$ be a local field.
+  #subtree(
+    taxon: "theorem"
+  )[
+    There exists a canonical isomorphism:
+    $
+      "inv"_K : H^(2)(op("Gal")(K^"alg" slash K), K^"alg"^times) xarrow(~) QQ slash ZZ
+    $
+    If $L$ is a finite Galois extension of $K$, then the exact sequences:
+    $
+      0 -> H^2(op("Gal")(L slash K), L^times) -> H^(2)(op("Gal")(K^"alg" slash K), K^"alg"^times) -> H^(2)(op("Gal")(L^"alg" slash L), L^"alg"^times) \
+      0 -> (n^(-1) ZZ) slash ZZ xarrow(~) QQ slash ZZ xarrow(n) QQ slash ZZ
+    $
+    induce an isomorphism $"inv"_(L slash K) : H^(2)(op("Gal")(L slash K), L^times) xarrow(~) (n^(-1) ZZ) slash ZZ$.
+  ]
+  #proof()[
+    Every subgroup $H^2(op("Gal")(L slash K), L^times) subset H^(2)(op("Gal")(K^"alg" slash K), K^"alg"^times)$ is contained in $H^(2)(op("Gal")(K^"un" slash K), K^"un"^times)$.
+  ]
+
+  #subtree(
+    title: "local Artin map",
+    taxon: "theorem"
+  )[
+    Let $"inv"_(L slash K)(u_(L slash K)) = n^(-1)$, then cup product with $u_(L slash K)$ induces an isomorphism:
+    $
+      H_"T"^(n)(op("Gal")(L slash K), ZZ) xarrow(~) H_"T"^(n+2)(op("Gal")(L slash K), L^times)
+    $
+    In particular, there is a local Artin map:
+    $
+      phi_(L slash K)^(-1) : (op("Gal")(L slash K))^"ab" = H_"T"^(-2)(op("Gal")(L slash K), ZZ) xarrow(~) H_(T)^(0)(op("Gal")(L slash K), L^times) = K^times slash N_(L slash K)(L^times)
+    $
+  ]
+
+  #subtree(
+    title: "Hilbert symbol",
+    taxon: "theorem"
+  )[
+    Assume $K$ has a primitive $n$-th root of unity, then the Hilbert symbol:
+    $
+      (-, -)_(n) : K^times slash (K^times)^n times K^times slash (K^times)^n -> mu_n
+    $
+    is defined by the cup product pairing:
+    $
+      H^1(K, mu_n) times.o H^1(K, mu_n) -> H^2(K, mu_n times.o mu_n) xarrow(~) mu_n
+    $
+  ]
+
+  #subtree(
+    title: "existence theorem",
+    taxon: "theorem"
+  )[
+    Every open subgroup of finite index in $K^times$ is a norm group.
+  ]
+]

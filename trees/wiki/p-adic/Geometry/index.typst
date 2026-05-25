@@ -10,3 +10,4 @@
 #local("Huber.typst") \
 #local("Adic.typst") \
 #local("Perfectoid.typst") \
+#local("Almost.typst") \
