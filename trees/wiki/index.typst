@@ -4,7 +4,7 @@
 #show: kodama
 
 #metadata((
-  title: "Wiki",
+  title: "Wiki (use at own risk)",
 ))
 
 #local("Differential Geometry/index.typst") \

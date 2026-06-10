@@ -1,0 +1,61 @@
+
+#import "../../../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  title: "Lubin–Tate formal groups",
+))
+
+#subtree(
+  taxon: "definition"
+)[
+  A formal group law on a commutative ring $R$ is a power series $F(u,v) in R[|u,v|]$ satisfying:
+  $
+    F(0, u) & = u \
+    F(u, v) & = F(v, u) \
+    F(u, F(v, w)) & = F(F(u, v), w)
+  $
+  A homomorphism between formal groups $F, F'$ is $h(t) in R[|t|]$ satisfying:
+  $
+    h(0) & = 0 \
+    h(F(u, v)) & = F'(h(u), h(v))
+  $
+]
+
+#subtree(
+  taxon: "example"
+)[
+  We define the formal additive group and multiplication group:
+  $
+    hat(GG_"a")(A) & := ("nilpotent elements in" A, +) \
+    F(u, v) & = u + v \
+    hat(GG_"m")(A) & := (1 + hat(GG_"a")(A), times) \
+    F(u, v) & = u + v + u v
+  $
+  A logrithm map is an isomorphism $h$ from given a formal group $hat(GG)$ to $hat(GG_"a")$. We further assume $h$ is normalized, that is, $h'(0) = 1$.
+]
+
+#subtree(
+  taxon: "theorem"
+)[
+  If $R$ is a $QQ$-algebra, then every formal group admits a unique logrithm $log_(F)(t) in R[|t|]$.
+]
+
+#proof()[
+  $log_F$ is a logrithm if and only if following differential equation holds:
+  $
+    (partial log_F)(F(u, v)) (partial_u F)(u, v) = (partial log_F)(u)
+  $
+  If $u = 0$, $log_F$ is uniquely determined by:
+  $
+    (partial log_F)(v) = 1/((partial_u F)(0, v))
+  $
+  Set $u = 0$, we have an identity from associativity:
+  $
+    F(u, F(v, w)) & = F(F(u, v), w) \
+    (partial_u F)(u, F(v,w)) & = (partial_u F)(F(u, v), w) (partial_u F)(u, v) \
+    (partial_u F)(0, F(v,w)) & = (partial_u F)(v, w) (partial_u F)(0, v) \
+  $
+  Hence the above $log_F$ is indeed a logrithm.
+]

@@ -8,4 +8,5 @@
 ))
 
 #embed("Geometry/index.typst", [p-adic Geometry]) \
+#embed("Hodge/index.typst", [p-adic Hodge]) \
 #embed("Prismatic/index.typst", [Prismatic Cohomology]) \

@@ -1,0 +1,11 @@
+
+#import "../../../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  title: "p-adic Hodge",
+))
+
+#local("Fargues--Fontaine.typst") \
+#local("Lubin--Tate.typst") \

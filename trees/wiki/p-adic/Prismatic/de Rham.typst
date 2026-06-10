@@ -1,0 +1,26 @@
+
+#import "../../../_lib/kodama.typ": *
+
+#show: kodama
+
+#metadata((
+  title: "de Rham",
+))
+
+#subtree(
+  taxon: "theorem"
+)[
+  The cotangent complex:
+  $
+    LL_(cal(O)_(CC_p) slash ZZ_p) & = cal(O)_(CC_p)(1)[1] \
+    LL_(W(cal(O)_(CC_p)^flat) slash ZZ_p) & = 0
+  $
+]
+
+We compute the cotangent complex $LL_(ZZ_(p)[mu_(p^(-infinity))] slash ZZ_p)$, we have:
+$
+  LL_(ZZ_(p)[mu_(p^(-n))] slash ZZ_p) & = (ZZ_(p)[mu_p^(-n)] d mu_(p^(-n))) / (p^(n - 1/(p-1))) \
+  LL_(ZZ_(p)[mu_(p^(-infinity))] slash ZZ_p) & = union.big_(n > 0)  (ZZ_(p)[mu_p^(-infinity)] d mu_(p^(-n))) / (p^(n - 1/(p-1))) 
+$
+But $LL_(hat(ZZ_(p)[mu_(p^(-n))]) slash ZZ_(p)[mu_(p^(-n))])$ is complete chaos.
+
